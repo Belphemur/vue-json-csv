@@ -20,6 +20,7 @@
   ],
   "dependencies": {
     "downloadjs": "^1.4.7",
+    "lodash": "^4.17",
     "papaparse": "^4.6.0"
   },
   "scripts": {
