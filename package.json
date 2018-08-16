@@ -2,7 +2,7 @@
   "name": "vue-json-csv",
   "version": "0.0.0",
   "description": "Download your JSON data as an CSV file directly from the browser",
-  "main": "JsonCSV.vue",
+  "main": "src/JsonCSV.vue",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Bekphemyr/vue-json-csv.git"
@@ -25,12 +25,29 @@
   },
   "scripts": {
     "commitmsg": "validate-commit-msg",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "test": "exit 0",
+    "build": "bili",
+    "dev": "poi",
+    "build:example": "poi build"
   },
+  "poi": {
+    "entry": "example/index.js",
+    "outDir": "docs",
+    "homepage": "./"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
   "devDependencies": {
     "@semantic-release/changelog": "^3.0.0",
     "@semantic-release/git": "^7.0.1",
     "babel-eslint": "^8.2.6",
+    "bili": "^3.1.2",
+    "buefy": "^0.6.6",
+    "bulma": "^0.7.1",
     "cz-conventional-changelog": "^2.0.0",
     "eslint": "^5.3.0",
     "eslint-config-standard": "^11.0.0",
@@ -42,8 +59,12 @@
     "eslint-plugin-standard": "^3.1.0",
     "husky": "^0.14.3",
     "last-release-git": "^0.0.3",
+    "poi": "^10.2.10",
+    "rollup-plugin-vue": "^4.3.2",
     "semantic-release": "^15.5.1",
-    "validate-commit-msg": "^2.14.0"
+    "validate-commit-msg": "^2.14.0",
+    "vue-json-pretty": "^1.4.1-beta.1",
+    "vue-template-compiler": "^2.5.17"
   },
   "config": {
     "commitizen": {
