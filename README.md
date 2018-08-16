@@ -1,4 +1,6 @@
 # Vue JSON to CSV file
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FBelphemur%2Fvue-json-csv.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FBelphemur%2Fvue-json-csv?ref=badge_shield)
+
 VueJS component to export Json Data into CSV file and download the resulting file.
 
 ## Getting started
@@ -91,3 +93,5 @@ REQUIRED
 
 ## License
 MIT
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FBelphemur%2Fvue-json-csv.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FBelphemur%2Fvue-json-csv?ref=badge_large)
