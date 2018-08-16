@@ -1,7 +1,7 @@
 <template>
     <div
-        :id="idName"
-        @click="generate"
+            :id="idName"
+            @click="generate"
     >
         <slot>
             Download {{name}}
@@ -17,21 +17,44 @@
   export default {
     name: 'JsonCSV',
     props: {
-      // Json to download
-      'data': {
+      /**
+       * Json to download
+       */
+      data: {
         type: Array,
         required: true
       },
-      // fields inside the Json Object that you want to export
-      // if no given, all the properties in the Json are exported
-      // Can either be an array or a function
-      'fields': {
+      /**
+       * fields inside the Json Object that you want to export
+       * if no given, all the properties in the Json are exported
+       * Can either be an array or a function
+       */
+      fields: {
         required: false
       },
-      // filename to export, default: data.csv
-      'name': {
+      /**
+       * filename to export, default: data.csv
+       */
+      name: {
         type: String,
         default: 'data.csv'
+      },
+      /**
+       * Delimiter for the CSV file
+       */
+      delimiter: {
+        type: String,
+        default: ',',
+        required: false
+      },
+      /**
+       * Should the module add SEP={delimiter}
+       *
+       * Useful for opening file with Excel
+       */
+      separatorExcel: {
+        type: Boolean,
+        default: false
       }
     },
     computed: {
@@ -61,12 +84,17 @@
     },
     methods: {
       generate () {
-        if (!this.data.length) {
-          console.error('No data given')
+        const dataExport = this.exportableData
+
+        if (!dataExport.length) {
+          console.error('No data to export')
           return
         }
 
-        const csv = PapaParse.unparse(this.exportableData)
+        let csv = PapaParse.unparse(dataExport, {delimiter: this.delimiter})
+        if (this.separatorExcel) {
+          csv = 'SEP=' + this.delimiter + '\r\n' + csv
+        }
         Download(csv, this.name, 'application/csv')
       }
     }
