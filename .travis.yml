@@ -1,4 +1,5 @@
 language: node_js
+sudo: true
 branches:
   except:
   - /^v\d+\.\d+\.\d+$/
@@ -12,7 +13,7 @@ node_js:
 - 10
 before_install:
   - yarn global add greenkeeper-lockfile@1
-  - curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh | sudo bash
+  - 'curl -H "Cache-Control: no-cache" https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh | sudo bash'
 before_script:
   - greenkeeper-lockfile-update
   - cd src/ && fossa
