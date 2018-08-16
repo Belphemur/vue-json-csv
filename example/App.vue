@@ -1,12 +1,18 @@
 <template>
     <div class="container is-widescreen">
+        <h1 class="title">
+            JSON to CSV
+        </h1>
         <div class="notification has-text-centered">
-            <download-csv
-                    :data="jsonData"
-                    :name="dataFile"
-            >
-                <button class="button">Download {{dataFile}}</button>
-            </download-csv>
+            <span class="subtitle">Click on the button to download the following JSON in CSV</span>
+            <div>
+                <download-csv
+                        :data="jsonData"
+                        :name="dataFile"
+                >
+                    <button class="button">Download</button>
+                </download-csv>
+            </div>
         </div>
         <pretty-json
                 :data="jsonData"

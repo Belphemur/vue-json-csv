@@ -1,14 +1,14 @@
-const { name } = require('./package.json')
+const {name} = require('./package.json')
 const vue = require('rollup-plugin-vue').default
 
 module.exports = {
   js: 'buble',
   input: 'src/JsonCSV.vue',
-  banner: true,
   format: ['umd-min', 'cjs', 'es'],
   filename: name + '[suffix].js',
+  css: true,
   plugins: [
-    vue({ css: false })
+    vue({css: true})
   ],
-  "name": "vue-json-csv"
+  'name': 'vue-json-csv'
 }
