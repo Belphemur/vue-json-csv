@@ -5,7 +5,7 @@
   "main": "src/JsonCSV.vue",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bekphemyr/vue-json-csv.git"
+    "url": "git+https://github.com/Belphemur/vue-json-csv.git"
   },
   "keywords": [
     "vue",
