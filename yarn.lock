@@ -2469,7 +2469,7 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
 
-last-release-git@0.0.3:
+last-release-git@^0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/last-release-git/-/last-release-git-0.0.3.tgz#7c82611022b134a87415981a936e26c521f2ef91"
   dependencies:

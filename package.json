@@ -41,7 +41,7 @@
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^3.1.0",
     "husky": "^0.14.3",
-    "last-release-git": "0.0.3",
+    "last-release-git": "^0.0.3",
     "semantic-release": "^15.5.1",
     "validate-commit-msg": "^2.14.0"
   },
@@ -54,14 +54,17 @@
     "getLastRelease": "last-release-git",
     "verifyConditions": [
       "@semantic-release/changelog",
+      "@semantic-release/npm",
       "@semantic-release/github"
     ],
     "prepare": [
       "@semantic-release/changelog",
+      "@semantic-release/npm",
       "@semantic-release/git"
     ],
     "publish": [
-      "@semantic-release/github"
+      "@semantic-release/github",
+      "@semantic-release/npm"
     ]
   }
 }
