@@ -23,7 +23,7 @@ script:
 
 deploy:
   provider: pages
-  skip-cleanup: false
+  skip-cleanup: true
   github-token: "$GH_TOKEN"
   local-dir: docs
   on:
@@ -31,4 +31,4 @@ deploy:
 
 after_success:
 - greenkeeper-lockfile-upload
-- if [[ $TRAVIS_BRANCH == 'master' ]]; then yarn travis-deploy-once "yarn semantic-release"; fi
+- if [[ $TRAVIS_BRANCH == 'master' ]]; then yarn semantic-release; fi
