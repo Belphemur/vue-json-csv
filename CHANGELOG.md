@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/Belphemur/vue-json-csv/compare/v1.0.0...v1.0.1) (2018-08-16)
+
+
+### Bug Fixes
+
+* **Packaging:** Fixes packaging and add it to the readme ([3ac2f3f](https://github.com/Belphemur/vue-json-csv/commit/3ac2f3f))
+
 # 1.0.0 (2018-08-16)
 
 
