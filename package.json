@@ -33,7 +33,7 @@
   "poi": {
     "entry": "example/index.js",
     "outDir": "docs",
-    "homepage": "./"
+    "publicPath": "./"
   },
   "files": [
     "dist/",

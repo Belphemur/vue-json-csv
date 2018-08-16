@@ -19,7 +19,7 @@ before_script:
   - cd src/ && fossa && cd ../
 script:
 - yarn build
-- if [[ $TRAVIS_BRANCH == 'master' ]]; then yarn poi build; fi
+- if [[ $TRAVIS_BRANCH == 'master' ]]; then yarn build:example; fi
 
 deploy:
   provider: pages
