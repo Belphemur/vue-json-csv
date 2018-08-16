@@ -1,0 +1,56 @@
+{
+  "name": "vue-json-csv",
+  "version": "0.0.0",
+  "description": "Download your JSON data as an CSV file directly from the browser",
+  "main": "JsonCSV.vue",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bekphemyr/vue-json-csv.git"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "vue2",
+    "csv",
+    "json",
+    "export",
+    "json csv",
+    "download",
+    "component"
+  ],
+  "dependencies": {
+    "downloadjs": "^1.4.7"
+  },
+  "scripts": {
+    "commitmsg": "validate-commit-msg",
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^3.0.0",
+    "@semantic-release/git": "^7.0.1",
+    "cz-conventional-changelog": "^2.0.0",
+    "husky": "^0.14.3",
+    "last-release-git": "0.0.3",
+    "semantic-release": "^15.5.1",
+    "validate-commit-msg": "^2.14.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "release": {
+    "getLastRelease": "last-release-git",
+    "verifyConditions": [
+      "@semantic-release/changelog",
+      "@semantic-release/github"
+    ],
+    "prepare": [
+      "@semantic-release/changelog",
+      "@semantic-release/git"
+    ],
+    "publish": [
+      "@semantic-release/github"
+    ]
+  }
+}

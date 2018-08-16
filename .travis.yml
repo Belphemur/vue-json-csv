@@ -1,0 +1,21 @@
+language: node_js
+branches:
+  except:
+  - /^v\d+\.\d+\.\d+$/
+cache:
+  yarn: true
+  directories:
+  - node_modules
+notifications:
+  email: false
+node_js:
+- 9
+- 8
+- 10
+before_install: yarn global add greenkeeper-lockfile@1
+before_script: greenkeeper-lockfile-update
+script:
+- if [[ $TRAVIS_BRANCH == 'master' ]]; then yarn build; fi
+after_success:
+- greenkeeper-lockfile-upload
+- if [[ $TRAVIS_BRANCH == 'master' ]]; then yarn travis-deploy-once "yarn semantic-release"; fi
