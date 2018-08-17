@@ -1,3 +1,17 @@
+# [1.1.0](https://github.com/Belphemur/vue-json-csv/compare/v1.0.2...v1.1.0) (2018-08-17)
+
+
+### Bug Fixes
+
+* **dbg:** Remove debugging code. ([99372a8](https://github.com/Belphemur/vue-json-csv/commit/99372a8))
+* **filtering:** Fix filtering fields ([51bd7d0](https://github.com/Belphemur/vue-json-csv/commit/51bd7d0))
+
+
+### Features
+
+* **events:** Adds event on starting and finishing export ([b83b21e](https://github.com/Belphemur/vue-json-csv/commit/b83b21e))
+* **labels:** Adds relabeling to the columns ([e7935a4](https://github.com/Belphemur/vue-json-csv/commit/e7935a4))
+
 ## [1.0.2](https://github.com/Belphemur/vue-json-csv/compare/v1.0.1...v1.0.2) (2018-08-16)
 
 
