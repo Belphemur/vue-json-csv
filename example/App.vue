@@ -44,7 +44,7 @@
           fname: 'First Name',
           lname: 'Last Name'
         },
-        fields : ['fname', 'lname', 'date']
+        fields : ['id', 'fname', 'lname', 'date']
       }
     }
   }

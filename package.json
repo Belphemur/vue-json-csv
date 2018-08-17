@@ -6,7 +6,6 @@
     "type": "git",
     "url": "git+https://github.com/Belphemur/vue-json-csv.git"
   },
-
   "main": "dist/vue-json-csv.cjs.js",
   "keywords": [
     "vue",
@@ -27,7 +26,7 @@
   "scripts": {
     "commitmsg": "validate-commit-msg",
     "semantic-release": "semantic-release",
-    "test": "exit 0",
+    "test": "jest",
     "build": "bili",
     "dev": "poi",
     "build:example": "poi build"
@@ -37,6 +36,19 @@
     "outDir": "docs",
     "publicPath": "./"
   },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "vue-jest",
+      "^.+\\.js$": "babel-jest"
+    },
+    "verbose": true,
+    "moduleDirectories": ["node_modules", "src"]
+  },
   "files": [
     "dist/",
     "README.md",
@@ -45,7 +57,9 @@
   "devDependencies": {
     "@semantic-release/changelog": "^3.0.0",
     "@semantic-release/git": "^7.0.1",
+    "@vue/test-utils": "^1.0.0-beta.24",
     "babel-eslint": "^8.2.6",
+    "babel-jest": "^23.4.2",
     "bili": "^3.1.2",
     "buefy": "^0.6.6",
     "bulma": "^0.7.1",
@@ -61,11 +75,13 @@
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^3.1.0",
     "husky": "^0.14.3",
+    "jest": "^23.5.0",
     "last-release-git": "^0.0.3",
     "poi": "^10.2.10",
     "rollup-plugin-vue": "^4.3.2",
     "semantic-release": "^15.5.1",
     "validate-commit-msg": "^2.14.0",
+    "vue-jest": "^2.6.0",
     "vue-json-pretty": "^1.4.1-beta.1",
     "vue-template-compiler": "^2.5.17"
   },

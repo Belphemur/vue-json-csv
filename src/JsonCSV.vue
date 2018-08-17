@@ -141,10 +141,7 @@
           return null
         }
 
-        return {
-          fields: _.keys(filteredData[0]),
-          data: filteredData
-        }
+        return filteredData
 
       }
     },
