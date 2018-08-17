@@ -41,7 +41,7 @@
       }
     }
 
-    let parseFields = function () {
+    let parseFieldsArg = function () {
 
       if (_.isFunction(fields) || (_.isObject(fields) && !_.isArray(fields))) {
         const fieldsToKeep = fields
@@ -64,7 +64,7 @@
 
 
     parseLabelsArg()
-    parseFields()
+    parseFieldsArg()
 
     if (_.isUndefined(fields)) {
       fields = (item) => item
