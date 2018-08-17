@@ -35,6 +35,7 @@ In your template
 | :---             | :---: | ---         |
 | data  | Array  | (_required_) Data to be exported |
 | fields  | Array/Function(value, key)  | fields inside the Json Object that you want to export. If no given, all the properties in the Json are exported. Use the function to filter the data and only keep the properties you want. |
+| labels  | Object/Function(value, key)  | Set the label for the header row. |
 | name    | string | filename to export, default: data.csv |
 | delimiter| string| Default ",". Can be changed to anything.|
 | separator-excel| boolean|If true, will prepend `SEP={delimiter}` to the file to make it easily usable with Excel|

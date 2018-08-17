@@ -14,6 +14,70 @@
   import Download from 'downloadjs'
   import PapaParse from 'papaparse'
 
+
+  const cleaningData = (data, fields, labels) => {
+
+    if (_.isUndefined(fields) && _.isUndefined(labels)) {
+      return data
+    }
+
+    let parseLabelsArg = function () {
+      if (_.isObject(labels)) {
+        const labelBindings = labels
+        labels = (item, key) => {
+          return labelBindings[key] || key
+        }
+      }
+
+      if (_.isFunction(labels)) {
+        const changeLabel = labels
+        labels = (item) => {
+          return _.mapKeys(item, changeLabel)
+        }
+      }
+
+      if (!_.isFunction(labels) && !_.isUndefined(labels)) {
+        throw new Error('Labels needs to be an Object or function(item, key)')
+      }
+    }
+
+    let parseFieldsArg = function () {
+
+      if (_.isFunction(fields) || (_.isObject(fields) && !_.isArray(fields))) {
+        const fieldsToKeep = fields
+        fields = (item) => {
+          return _.pickBy(item, fieldsToKeep)
+        }
+      }
+
+      if (_.isArray(fields)) {
+        const fieldToKeep = fields
+        fields = (item) => {
+          return _.pick(item, fieldToKeep)
+        }
+      }
+
+      if (!_.isFunction(fields) && !_.isUndefined(fields)) {
+        throw new Error('Fields needs to be an array or function(item, key)')
+      }
+    }
+
+
+    parseLabelsArg()
+    parseFieldsArg()
+
+    if (_.isUndefined(fields)) {
+      fields = (item) => item
+    }
+
+    if (_.isUndefined(labels)) {
+      labels = (item) => item
+    }
+
+    return _.map(data, (item) => labels(fields(item)))
+
+  }
+
   export default {
     name: 'JsonCSV',
     props: {
@@ -55,6 +119,14 @@
       separatorExcel: {
         type: Boolean,
         default: false
+      },
+      /**
+       * Labels for columns
+       *
+       * Object or function
+       */
+      labels: {
+        required: false
       }
     },
     computed: {
@@ -64,29 +136,20 @@
         return 'export_' + now
       },
       exportableData () {
-        if (_.isUndefined(this.fields)) {
-          return this.data
+        const filteredData = cleaningData(this.data, this.fields, this.labels)
+        if (!filteredData.length) {
+          return null
         }
 
-        if (_.isArray(this.fields)) {
-          return _.map(this.data, (item) => {
-            return _.pick(item, this.fields)
-          })
-        }
+        return filteredData
 
-        if (_.isFunction(this.fields) || _.isObject(this.fields)) {
-          return _.map(this.data, (item) => {
-            return _.pickBy(item, this.fields)
-          })
-        }
-        throw new Error('Fields needs to be an array or function(item, key)')
       }
     },
     methods: {
       generate () {
         const dataExport = this.exportableData
 
-        if (!dataExport.length) {
+        if (!dataExport) {
           console.error('No data to export')
           return
         }
@@ -102,7 +165,7 @@
 </script>
 
 <style scoped>
- div {
-     display: inline;
- }
+    div {
+        display: inline;
+    }
 </style>
