@@ -3,6 +3,9 @@
         <h1 class="title">
             JSON to CSV
         </h1>
+        <b-notification :active.sync="isExported">
+            File Exported
+        </b-notification>
         <div class="notification has-text-centered">
             <p class="subtitle">Click on the button to download the following JSON in CSV.</p>
             <p class="subtitle"> The fname and lname will be replaced by First Name and Last Name in the CSV.</p>
@@ -12,6 +15,7 @@
                         :name="dataFile"
                         :labels="labels"
                         :fields="fields"
+                        v-on:export-finished="exported"
                 >
                     <button class="button">Download</button>
                 </download-csv>
@@ -44,7 +48,17 @@
           fname: 'First Name',
           lname: 'Last Name'
         },
-        fields : ['id', 'fname', 'lname', 'date']
+        fields : ['id', 'fname', 'lname', 'date'],
+        isExported: false
+      }
+    },
+    methods: {
+      exported(event) {
+        console.log(event)
+        this.isExported = true
+        setTimeout(() => {
+          this.isExported = false
+        }, 3 * 1000)
       }
     }
   }
