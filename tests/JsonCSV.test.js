@@ -91,4 +91,21 @@ describe('Component', () => {
     firstData.not.toHaveProperty('date')
     firstData.not.toHaveProperty('gender')
   })
+
+  test('is triggering event on export', () => {
+    const wrapper = mount(Component, {
+      propsData: {
+        data: [
+          {'id': 1, 'fname': 'Jesse', 'lname': 'Simmons', 'date': '2016-10-15 13:43:27', 'gender': 'Male'}
+        ],
+        testing: true
+      }
+    })
+    const vm = wrapper.vm
+
+    wrapper.find('#'+ vm.idName).trigger('click')
+
+    expect(wrapper.emitted()['export-started']).toBeTruthy()
+    expect(wrapper.emitted()['export-finished']).toBeTruthy()
+  })
 })

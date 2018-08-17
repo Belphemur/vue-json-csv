@@ -127,6 +127,13 @@
        */
       labels: {
         required: false
+      },
+      /**
+       * Used only for testing purposes
+       */
+      testing : {
+        required: false,
+        default: false
       }
     },
     computed: {
@@ -147,6 +154,7 @@
     },
     methods: {
       generate () {
+        this.$emit('export-started')
         const dataExport = this.exportableData
 
         if (!dataExport) {
@@ -158,7 +166,10 @@
         if (this.separatorExcel) {
           csv = 'SEP=' + this.delimiter + '\r\n' + csv
         }
-        Download(csv, this.name, 'application/csv')
+        this.$emit('export-finished')
+        if(!this.testing) {
+          Download(csv, this.name, 'application/csv')
+        }
       }
     }
   }
