@@ -42,16 +42,18 @@
     }
 
     let parseFields = function () {
+
+      if (_.isFunction(fields) || (_.isObject(fields) && !_.isArray(fields))) {
+        const fieldsToKeep = fields
+        fields = (item) => {
+          return _.pickBy(item, fieldsToKeep)
+        }
+      }
+
       if (_.isArray(fields)) {
         const fieldToKeep = fields
         fields = (item) => {
           return _.pick(item, fieldToKeep)
-        }
-      }
-
-      if (_.isFunction(fields) || _.isObject(fields)) {
-        fields = (item) => {
-          return _.pickBy(item, fields)
         }
       }
 

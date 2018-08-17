@@ -11,6 +11,7 @@
                         :data="jsonData"
                         :name="dataFile"
                         :labels="labels"
+                        :fields="fields"
                 >
                     <button class="button">Download</button>
                 </download-csv>
@@ -43,6 +44,7 @@
           fname: 'First Name',
           lname: 'Last Name'
         },
+        fields : ['fname', 'lname', 'date']
       }
     }
   }
