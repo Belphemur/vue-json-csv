@@ -1,34 +1,38 @@
 language: node_js
 sudo: true
-branches:
-  except:
-  - /^v\d+\.\d+\.\d+$/
+node_js:
+- 10
 cache:
   yarn: true
   directories:
   - node_modules
-notifications:
-  email: false
-node_js:
-- 10
-before_install:
-  - yarn global add greenkeeper-lockfile@1
-  - 'curl -H "Cache-Control: no-cache" https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh | sudo bash'
-before_script:
-  - greenkeeper-lockfile-update
-  - cd src/ && fossa && cd ../
-script:
-- yarn build
-- if [[ $TRAVIS_BRANCH == 'master' ]]; then yarn build:example; fi
-
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: "$GH_TOKEN"
-  local-dir: docs
-  on:
-    branch: master
-
-after_success:
-- greenkeeper-lockfile-upload
-- if [[ $TRAVIS_BRANCH == 'master' ]]; then yarn semantic-release; fi
+stages:
+- test
+- name: deploy
+  if: branch = master && type = push
+jobs:
+  include:
+  - stage: test
+    script:
+      - yarn test
+  - stage: deploy
+    install: true
+    before_install:
+      - 'curl -H "Cache-Control: no-cache" https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh | sudo bash'
+    before_script:
+      - cd src/ && fossa && cd ../
+    script:
+      - yarn build:example
+    after_success: true
+    deploy:
+      provider: pages
+      skip-cleanup: true
+      github-token: "$GH_TOKEN"
+      local-dir: docs
+      on:
+        branch: master
+  - script:
+      - yarn build
+      - yarn semantic-release
+    after_success: skip
+    before_script: skip
