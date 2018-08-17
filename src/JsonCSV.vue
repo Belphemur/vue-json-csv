@@ -141,9 +141,6 @@
           return null
         }
 
-        console.log(filteredData)
-        throw new Error()
-
         return {
           fields: _.keys(filteredData[0]),
           data: filteredData
