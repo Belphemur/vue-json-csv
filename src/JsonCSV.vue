@@ -14,9 +14,7 @@
   import Download from 'downloadjs'
   import PapaParse from 'papaparse'
 
-
   const cleaningData = (data, fields, labels) => {
-
     if (_.isUndefined(fields) && _.isUndefined(labels)) {
       return data
     }
@@ -42,7 +40,6 @@
     }
 
     let parseFieldsArg = function () {
-
       if (_.isFunction(fields) || (_.isObject(fields) && !_.isArray(fields))) {
         const fieldsToKeep = fields
         fields = (item) => {
@@ -62,7 +59,6 @@
       }
     }
 
-
     parseLabelsArg()
     parseFieldsArg()
 
@@ -75,7 +71,6 @@
     }
 
     return _.map(data, (item) => labels(fields(item)))
-
   }
 
   export default {
@@ -131,7 +126,7 @@
       /**
        * Used only for testing purposes
        */
-      testing : {
+      testing: {
         required: false,
         default: false
       }
@@ -149,7 +144,6 @@
         }
 
         return filteredData
-
       }
     },
     methods: {
@@ -167,7 +161,7 @@
           csv = 'SEP=' + this.delimiter + '\r\n' + csv
         }
         this.$emit('export-finished')
-        if(!this.testing) {
+        if (!this.testing) {
           Download(csv, this.name, 'application/csv')
         }
       }
