@@ -47,7 +47,7 @@ In your template
 import Vue from 'vue'
 import JsonCSV from 'vue-json-csv'
 
-Vue.component('downloadJson', JsonCSV)
+Vue.component('downloadCsv', JsonCSV)
 
 const app = new Vue({
     el: '#app',
