@@ -14,9 +14,7 @@
   import Download from 'downloadjs'
   import PapaParse from 'papaparse'
 
-
   const cleaningData = (data, fields, labels) => {
-
     if (_.isUndefined(fields) && _.isUndefined(labels)) {
       return data
     }
@@ -42,7 +40,6 @@
     }
 
     let parseFieldsArg = function () {
-
       if (_.isFunction(fields) || (_.isObject(fields) && !_.isArray(fields))) {
         const fieldsToKeep = fields
         fields = (item) => {
@@ -62,7 +59,6 @@
       }
     }
 
-
     parseLabelsArg()
     parseFieldsArg()
 
@@ -75,7 +71,6 @@
     }
 
     return _.map(data, (item) => labels(fields(item)))
-
   }
 
   export default {
@@ -121,6 +116,21 @@
         default: false
       },
       /**
+       * What will be the encoding of the file
+       */
+      encoding: {
+        type: String,
+        default: 'utf8'
+      },
+      /**
+       * Advanced options for Papaparse that is used to export to CSV
+       */
+      advancedOptions: {
+        type: Object,
+        default: () => {
+        }
+      },
+      /**
        * Labels for columns
        *
        * Object or function
@@ -131,7 +141,7 @@
       /**
        * Used only for testing purposes
        */
-      testing : {
+      testing: {
         required: false,
         default: false
       }
@@ -149,7 +159,6 @@
         }
 
         return filteredData
-
       }
     },
     methods: {
@@ -162,12 +171,16 @@
           return
         }
 
-        let csv = PapaParse.unparse(dataExport, {delimiter: this.delimiter})
+        let csv = PapaParse.unparse(dataExport, {
+          delimiter: this.delimiter,
+          encoding: this.encoding,
+          ...this.advancedOptions
+        })
         if (this.separatorExcel) {
           csv = 'SEP=' + this.delimiter + '\r\n' + csv
         }
         this.$emit('export-finished')
-        if(!this.testing) {
+        if (!this.testing) {
           Download(csv, this.name, 'application/csv')
         }
       }
