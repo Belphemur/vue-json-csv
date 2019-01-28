@@ -1,3 +1,17 @@
+## [1.2.2](https://github.com/Belphemur/vue-json-csv/compare/v1.2.1...v1.2.2) (2019-01-28)
+
+
+### Bug Fixes
+
+* **Fossa:** Run fossa after success ([6381b07](https://github.com/Belphemur/vue-json-csv/commit/6381b07))
+
+## [1.2.1](https://github.com/Belphemur/vue-json-csv/compare/v1.2.0...v1.2.1) (2019-01-28)
+
+
+### Bug Fixes
+
+* **Fossa:** Fix build with fossa ([a954d74](https://github.com/Belphemur/vue-json-csv/commit/a954d74))
+
 # [1.2.0](https://github.com/Belphemur/vue-json-csv/compare/v1.1.0...v1.2.0) (2019-01-28)
 
 
