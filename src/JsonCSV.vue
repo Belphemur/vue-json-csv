@@ -116,6 +116,21 @@
         default: false
       },
       /**
+       * What will be the encoding of the file
+       */
+      encoding: {
+        type: String,
+        default: 'utf8'
+      },
+      /**
+       * Advanced options for Papaparse that is used to export to CSV
+       */
+      advancedOptions: {
+        type: Object,
+        default: () => {
+        }
+      },
+      /**
        * Labels for columns
        *
        * Object or function
@@ -156,7 +171,11 @@
           return
         }
 
-        let csv = PapaParse.unparse(dataExport, {delimiter: this.delimiter})
+        let csv = PapaParse.unparse(dataExport, {
+          delimiter: this.delimiter,
+          encoding: this.encoding,
+          ...this.advancedOptions
+        })
         if (this.separatorExcel) {
           csv = 'SEP=' + this.delimiter + '\r\n' + csv
         }
