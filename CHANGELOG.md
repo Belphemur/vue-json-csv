@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/Belphemur/vue-json-csv/compare/v1.2.0...v1.2.1) (2019-01-28)
+
+
+### Bug Fixes
+
+* **Fossa:** Fix build with fossa ([a954d74](https://github.com/Belphemur/vue-json-csv/commit/a954d74))
+
 # [1.2.0](https://github.com/Belphemur/vue-json-csv/compare/v1.1.0...v1.2.0) (2019-01-28)
 
 
