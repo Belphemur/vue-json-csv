@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/Belphemur/vue-json-csv/compare/v1.1.0...v1.2.0) (2019-01-28)
+
+
+### Bug Fixes
+
+* **Babel:** Remove unneeded preset ([b94d64a](https://github.com/Belphemur/vue-json-csv/commit/b94d64a))
+
+
+### Features
+
+* **Encoding:** Support for different encoding ([1832128](https://github.com/Belphemur/vue-json-csv/commit/1832128)), closes [#7](https://github.com/Belphemur/vue-json-csv/issues/7) [#6](https://github.com/Belphemur/vue-json-csv/issues/6)
+
 # [1.1.0](https://github.com/Belphemur/vue-json-csv/compare/v1.0.2...v1.1.0) (2018-08-17)
 
 
