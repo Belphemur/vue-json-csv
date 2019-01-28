@@ -1,7 +1,6 @@
 {
   "presets": [
-    "@babel/preset-env",
-    "poi/babel"
+    "@babel/preset-env"
   ],
   "env": {
     "test": {
