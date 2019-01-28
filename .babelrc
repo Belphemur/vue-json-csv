@@ -1,4 +1,8 @@
 {
+  "presets": [
+    "@babel/preset-env",
+    "poi/babel"
+  ],
   "env": {
     "test": {
       "plugins": ["transform-es2015-modules-commonjs"]
