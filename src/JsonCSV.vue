@@ -130,7 +130,7 @@
 
       fieldsFunctionGenerator () {
         if(!_.isUndefined(this.fields) && !_.isFunction(this.fields) && !_.isObject(this.fields) && !_.isArray(this.fields)) {
-          throw new Error('Fields needs to be a function(value,key) or object.')
+          throw new Error('Fields needs to be a function(value,key) or array.')
         }
 
         if (_.isFunction(this.fields) || (_.isObject(this.fields) && !_.isArray(this.fields))) {
