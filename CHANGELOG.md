@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/Belphemur/vue-json-csv/compare/v1.2.3...v1.2.4) (2019-02-25)
+
+
+### Bug Fixes
+
+* **Debug:** Removes console.log ([2db6746](https://github.com/Belphemur/vue-json-csv/commit/2db6746)), closes [#12](https://github.com/Belphemur/vue-json-csv/issues/12)
+
 ## [1.2.3](https://github.com/Belphemur/vue-json-csv/compare/v1.2.2...v1.2.3) (2019-02-13)
 
 

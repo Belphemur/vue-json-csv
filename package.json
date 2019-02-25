@@ -1,6 +1,6 @@
 {
   "name": "vue-json-csv",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Download your JSON data as an CSV file directly from the browser",
   "repository": {
     "type": "git",
