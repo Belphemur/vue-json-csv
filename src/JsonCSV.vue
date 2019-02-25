@@ -112,7 +112,6 @@
         if (_.isFunction(this.labels)) {
           return (item) => {
             let mapKeys = _.mapKeys(item, this.labels)
-            console.log(mapKeys)
             return mapKeys
           }
         }
