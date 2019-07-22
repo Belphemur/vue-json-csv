@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/Belphemur/vue-json-csv/compare/v1.2.4...v1.2.5) (2019-07-22)
+
+
+### Bug Fixes
+
+* **Lodash:** Fixes the potential security vulnerability from the lodash ([3f98437](https://github.com/Belphemur/vue-json-csv/commit/3f98437))
+
 ## [1.2.4](https://github.com/Belphemur/vue-json-csv/compare/v1.2.3...v1.2.4) (2019-02-25)
 
 
