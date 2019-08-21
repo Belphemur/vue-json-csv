@@ -1,3 +1,10 @@
+## [1.2.6](https://github.com/Belphemur/vue-json-csv/compare/v1.2.5...v1.2.6) (2019-08-21)
+
+
+### Bug Fixes
+
+* **Encoding:** Fix utf8 encoding problems. ([30d685d](https://github.com/Belphemur/vue-json-csv/commit/30d685d)), closes [#23](https://github.com/Belphemur/vue-json-csv/issues/23)
+
 ## [1.2.5](https://github.com/Belphemur/vue-json-csv/compare/v1.2.4...v1.2.5) (2019-07-22)
 
 
