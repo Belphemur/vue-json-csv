@@ -1,3 +1,31 @@
+## [1.2.7](https://github.com/Belphemur/vue-json-csv/compare/v1.2.6...v1.2.7) (2019-08-21)
+
+
+### Bug Fixes
+
+* **Building:** Fix building process ([3479811](https://github.com/Belphemur/vue-json-csv/commit/3479811))
+
+## [1.2.6](https://github.com/Belphemur/vue-json-csv/compare/v1.2.5...v1.2.6) (2019-08-21)
+
+
+### Bug Fixes
+
+* **Encoding:** Fix utf8 encoding problems. ([30d685d](https://github.com/Belphemur/vue-json-csv/commit/30d685d)), closes [#23](https://github.com/Belphemur/vue-json-csv/issues/23)
+
+## [1.2.5](https://github.com/Belphemur/vue-json-csv/compare/v1.2.4...v1.2.5) (2019-07-22)
+
+
+### Bug Fixes
+
+* **Lodash:** Fixes the potential security vulnerability from the lodash ([3f98437](https://github.com/Belphemur/vue-json-csv/commit/3f98437))
+
+## [1.2.4](https://github.com/Belphemur/vue-json-csv/compare/v1.2.3...v1.2.4) (2019-02-25)
+
+
+### Bug Fixes
+
+* **Debug:** Removes console.log ([2db6746](https://github.com/Belphemur/vue-json-csv/commit/2db6746)), closes [#12](https://github.com/Belphemur/vue-json-csv/issues/12)
+
 ## [1.2.3](https://github.com/Belphemur/vue-json-csv/compare/v1.2.2...v1.2.3) (2019-02-13)
 
 
