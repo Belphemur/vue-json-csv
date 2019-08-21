@@ -1,3 +1,10 @@
+## [1.2.7](https://github.com/Belphemur/vue-json-csv/compare/v1.2.6...v1.2.7) (2019-08-21)
+
+
+### Bug Fixes
+
+* **Building:** Fix building process ([3479811](https://github.com/Belphemur/vue-json-csv/commit/3479811))
+
 ## [1.2.6](https://github.com/Belphemur/vue-json-csv/compare/v1.2.5...v1.2.6) (2019-08-21)
 
 
