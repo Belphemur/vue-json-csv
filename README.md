@@ -39,7 +39,7 @@ In your template
 | name    | string | filename to export, default: data.csv |
 | delimiter| string| Default ",". Can be changed to anything.|
 | separator-excel| boolean|If true, will prepend `SEP={delimiter}` to the file to make it easily usable with Excel|
-| encoding| string|Set the wanted encoding, default to 'utf8'|
+| encoding| string|Set the wanted encoding, default to 'utf-8'|
 | advancedOptions| Object|You can set all the [options of PapaParse](https://www.papaparse.com/docs#config) yourself |
 
 ## Example

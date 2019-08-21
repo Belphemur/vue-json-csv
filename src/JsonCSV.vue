@@ -11,7 +11,8 @@
 
 <script>
   import _ from 'lodash'
-  import Download from 'downloadjs'
+  import { saveAs } from 'file-saver';
+
   import PapaParse from 'papaparse'
 
   export default {
@@ -61,7 +62,7 @@
        */
       encoding: {
         type: String,
-        default: 'utf8'
+        default: 'utf-8'
       },
       /**
        * Advanced options for Papaparse that is used to export to CSV
@@ -176,7 +177,8 @@
         }
         this.$emit('export-finished')
         if (!this.testing) {
-          Download(csv, this.name, 'application/csv')
+          let blob = new Blob([csv], {type: "application/csv;charset=" + this.encoding})
+          saveAs(blob, this.name)
         }
       }
     }

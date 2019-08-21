@@ -44,6 +44,7 @@
           {'id': 4, 'fname': 'Clarence', 'lname': 'Flores', 'date': '2016-04-10 10:28:46', 'gender': 'Male'},
           {'id': 5, 'fname': 'Anne', 'lname': 'Lee', 'date': '2016-12-06 14:38:38', 'gender': 'Female'},
           {'id': 6, 'fname': '佟博', 'lname': '能娜', 'date': '2016-12-06 14:38:38', 'gender': 'Male'},
+          {'id': 7, 'fname': 'Širůčková', 'lname': 'Tereza', 'date': '2019-12-06 14:38:38', 'gender': 'Female'},
         ],
         dataFile: 'my_export.csv',
         labels: {
