@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/Belphemur/vue-json-csv.git"
   },
-  "main": "dist/vue-json-csv.cjs.js",
+  "main": "dist/JsonCSV.js",
   "keywords": [
     "vue",
     "vuejs",
