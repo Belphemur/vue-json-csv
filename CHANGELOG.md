@@ -1,3 +1,10 @@
+## [1.2.8](https://github.com/Belphemur/vue-json-csv/compare/v1.2.7...v1.2.8) (2019-08-22)
+
+
+### Bug Fixes
+
+* **Building:** Use Vue Cli to build the library ([a9c2694](https://github.com/Belphemur/vue-json-csv/commit/a9c2694)), closes [#27](https://github.com/Belphemur/vue-json-csv/issues/27)
+
 ## [1.2.7](https://github.com/Belphemur/vue-json-csv/compare/v1.2.6...v1.2.7) (2019-08-21)
 
 
