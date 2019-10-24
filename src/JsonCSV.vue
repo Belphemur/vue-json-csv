@@ -167,11 +167,10 @@
           return
         }
 
-        let csv = PapaParse.unparse(dataExport, {
+        let csv = PapaParse.unparse(dataExport, Object.assign({
           delimiter: this.delimiter,
           encoding: this.encoding,
-          ...this.advancedOptions
-        })
+        }, this.advancedOptions));
         if (this.separatorExcel) {
           csv = 'SEP=' + this.delimiter + '\r\n' + csv
         }
