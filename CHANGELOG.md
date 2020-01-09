@@ -1,3 +1,10 @@
+## [1.2.9](https://github.com/Belphemur/vue-json-csv/compare/v1.2.8...v1.2.9) (2019-10-24)
+
+
+### Bug Fixes
+
+* **JsonCSV:** remove spread operator that fails on edge 18 ([746b9fd](https://github.com/Belphemur/vue-json-csv/commit/746b9fd))
+
 ## [1.2.8](https://github.com/Belphemur/vue-json-csv/compare/v1.2.7...v1.2.8) (2019-08-22)
 
 
