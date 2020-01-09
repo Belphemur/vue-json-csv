@@ -174,6 +174,10 @@
         if (this.separatorExcel) {
           csv = 'SEP=' + this.delimiter + '\r\n' + csv
         }
+        //Add BOM when UTF-8
+        if(this.encoding === "utf-8") {
+            csv = "\ufeff" + csv
+        }
         this.$emit('export-finished')
         if (!this.testing) {
           let blob = new Blob([csv], {type: "application/csv;charset=" + this.encoding})
