@@ -1,3 +1,10 @@
+## [1.2.10](https://github.com/Belphemur/vue-json-csv/compare/v1.2.9...v1.2.10) (2020-01-09)
+
+
+### Bug Fixes
+
+* **utf8:** Add BOM for UTF-8 ([27ae822](https://github.com/Belphemur/vue-json-csv/commit/27ae822a270c5e6748d5148a2b7bcf81cb6aad5d)), closes [#30](https://github.com/Belphemur/vue-json-csv/issues/30) [#36](https://github.com/Belphemur/vue-json-csv/issues/36)
+
 ## [1.2.9](https://github.com/Belphemur/vue-json-csv/compare/v1.2.8...v1.2.9) (2019-10-24)
 
 
