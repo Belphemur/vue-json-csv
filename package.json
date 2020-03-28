@@ -20,7 +20,9 @@
   ],
   "dependencies": {
     "file-saver": "^2.0.2",
-    "lodash": "^4.17.15",
+    "lodash.mapkeys": "^4.6.0",
+    "lodash.pick": "^4.4.0",
+    "lodash.pickby": "^4.6.0",
     "papaparse": "^5.1.1",
     "vue": "^2.6.11"
   },
