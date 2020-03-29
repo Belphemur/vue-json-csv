@@ -1,6 +1,5 @@
-import {mount} from '@vue/test-utils'
-import Component from '../src/JsonCSV'
-import _ from 'lodash'
+import { mount } from '@vue/test-utils'
+import Component, { isType } from '../src/JsonCSV'
 
 describe('Component', () => {
   test('is a Vue instance', () => {
@@ -16,11 +15,11 @@ describe('Component', () => {
     const wrapper = mount(Component, {
       propsData: {
         data: [
-          {'id': 1, 'fname': 'Jesse', 'lname': 'Simmons', 'date': '2016-10-15 13:43:27', 'gender': 'Male'},
-          {'id': 2, 'fname': 'John', 'lname': 'Jacobs', 'date': '2016-12-15 06:00:53', 'gender': 'Male'},
-          {'id': 3, 'fname': 'Tina', 'lname': 'Gilbert', 'date': '2016-04-26 06:26:28', 'gender': 'Female'},
-          {'id': 4, 'fname': 'Clarence', 'lname': 'Flores', 'date': '2016-04-10 10:28:46', 'gender': 'Male'},
-          {'id': 5, 'fname': 'Anne', 'lname': 'Lee', 'date': '2016-12-06 14:38:38', 'gender': 'Female'}
+          { id: 1, fname: 'Jesse', lname: 'Simmons', date: '2016-10-15 13:43:27', gender: 'Male' },
+          { id: 2, fname: 'John', lname: 'Jacobs', date: '2016-12-15 06:00:53', gender: 'Male' },
+          { id: 3, fname: 'Tina', lname: 'Gilbert', date: '2016-04-26 06:26:28', gender: 'Female' },
+          { id: 4, fname: 'Clarence', lname: 'Flores', date: '2016-04-10 10:28:46', gender: 'Male' },
+          { id: 5, fname: 'Anne', lname: 'Lee', date: '2016-12-06 14:38:38', gender: 'Female' }
         ],
         fields: ['fname', 'lname']
       }
@@ -41,14 +40,14 @@ describe('Component', () => {
       const wrapper = mount(Component, {
         propsData: {
           data: [
-            {'id': 1, 'fname': 'Jesse', 'lname': 'Simmons', 'date': '2016-10-15 13:43:27', 'gender': 'Male'},
-            {'id': 2, 'fname': 'John', 'lname': 'Jacobs', 'date': '2016-12-15 06:00:53', 'gender': 'Male'},
-            {'id': 3, 'fname': 'Tina', 'lname': 'Gilbert', 'date': '2016-04-26 06:26:28', 'gender': 'Female'},
-            {'id': 4, 'fname': 'Clarence', 'lname': 'Flores', 'date': '2016-04-10 10:28:46', 'gender': 'Male'},
-            {'id': 5, 'fname': 'Anne', 'lname': 'Lee', 'date': '2016-12-06 14:38:38', 'gender': 'Female'}
+            { id: 1, fname: 'Jesse', lname: 'Simmons', date: '2016-10-15 13:43:27', gender: 'Male' },
+            { id: 2, fname: 'John', lname: 'Jacobs', date: '2016-12-15 06:00:53', gender: 'Male' },
+            { id: 3, fname: 'Tina', lname: 'Gilbert', date: '2016-04-26 06:26:28', gender: 'Female' },
+            { id: 4, fname: 'Clarence', lname: 'Flores', date: '2016-04-10 10:28:46', gender: 'Male' },
+            { id: 5, fname: 'Anne', lname: 'Lee', date: '2016-12-06 14:38:38', gender: 'Female' }
           ],
           labels: (value, key) => {
-            if (_.endsWith(key, 'name')) {
+            if (key.endsWith('name')) {
               return key.replace('name', 'Name')
             }
             return key
@@ -69,11 +68,11 @@ describe('Component', () => {
       const wrapper = mount(Component, {
         propsData: {
           data: [
-            {'id': 1, 'fname': 'Jesse', 'lname': 'Simmons', 'date': '2016-10-15 13:43:27', 'gender': 'Male'},
-            {'id': 2, 'fname': 'John', 'lname': 'Jacobs', 'date': '2016-12-15 06:00:53', 'gender': 'Male'},
-            {'id': 3, 'fname': 'Tina', 'lname': 'Gilbert', 'date': '2016-04-26 06:26:28', 'gender': 'Female'},
-            {'id': 4, 'fname': 'Clarence', 'lname': 'Flores', 'date': '2016-04-10 10:28:46', 'gender': 'Male'},
-            {'id': 5, 'fname': 'Anne', 'lname': 'Lee', 'date': '2016-12-06 14:38:38', 'gender': 'Female'}
+            { id: 1, fname: 'Jesse', lname: 'Simmons', date: '2016-10-15 13:43:27', gender: 'Male' },
+            { id: 2, fname: 'John', lname: 'Jacobs', date: '2016-12-15 06:00:53', gender: 'Male' },
+            { id: 3, fname: 'Tina', lname: 'Gilbert', date: '2016-04-26 06:26:28', gender: 'Female' },
+            { id: 4, fname: 'Clarence', lname: 'Flores', date: '2016-04-10 10:28:46', gender: 'Male' },
+            { id: 5, fname: 'Anne', lname: 'Lee', date: '2016-12-06 14:38:38', gender: 'Female' }
           ],
           labels: {
             fname: 'First Name',
@@ -97,11 +96,11 @@ describe('Component', () => {
       const wrapper = mount(Component, {
         propsData: {
           data: [
-            {'id': 1, 'fname': 'Jesse', 'lname': 'Simmons', 'date': '2016-10-15 13:43:27', 'gender': 'Male'},
-            {'id': 2, 'fname': 'John', 'lname': 'Jacobs', 'date': '2016-12-15 06:00:53', 'gender': 'Male'},
-            {'id': 3, 'fname': 'Tina', 'lname': 'Gilbert', 'date': '2016-04-26 06:26:28', 'gender': 'Female'},
-            {'id': 4, 'fname': 'Clarence', 'lname': 'Flores', 'date': '2016-04-10 10:28:46', 'gender': 'Male'},
-            {'id': 5, 'fname': 'Anne', 'lname': 'Lee', 'date': '2016-12-06 14:38:38', 'gender': 'Female'}
+            { id: 1, fname: 'Jesse', lname: 'Simmons', date: '2016-10-15 13:43:27', gender: 'Male' },
+            { id: 2, fname: 'John', lname: 'Jacobs', date: '2016-12-15 06:00:53', gender: 'Male' },
+            { id: 3, fname: 'Tina', lname: 'Gilbert', date: '2016-04-26 06:26:28', gender: 'Female' },
+            { id: 4, fname: 'Clarence', lname: 'Flores', date: '2016-04-10 10:28:46', gender: 'Male' },
+            { id: 5, fname: 'Anne', lname: 'Lee', date: '2016-12-06 14:38:38', gender: 'Female' }
           ],
           fields: ['fname', 'lname']
         }
@@ -120,13 +119,13 @@ describe('Component', () => {
       const wrapper = mount(Component, {
         propsData: {
           data: [
-            {'id': 1, 'fname': 'Jesse', 'lname': 'Simmons', 'date': '2016-10-15 13:43:27', 'gender': 'Male'},
-            {'id': 2, 'fname': 'John', 'lname': 'Jacobs', 'date': '2016-12-15 06:00:53', 'gender': 'Male'},
-            {'id': 3, 'fname': 'Tina', 'lname': 'Gilbert', 'date': '2016-04-26 06:26:28', 'gender': 'Female'},
-            {'id': 4, 'fname': 'Clarence', 'lname': 'Flores', 'date': '2016-04-10 10:28:46', 'gender': 'Male'},
-            {'id': 5, 'fname': 'Anne', 'lname': 'Lee', 'date': '2016-12-06 14:38:38', 'gender': 'Female'}
+            { id: 1, fname: 'Jesse', lname: 'Simmons', date: '2016-10-15 13:43:27', gender: 'Male' },
+            { id: 2, fname: 'John', lname: 'Jacobs', date: '2016-12-15 06:00:53', gender: 'Male' },
+            { id: 3, fname: 'Tina', lname: 'Gilbert', date: '2016-04-26 06:26:28', gender: 'Female' },
+            { id: 4, fname: 'Clarence', lname: 'Flores', date: '2016-04-10 10:28:46', gender: 'Male' },
+            { id: 5, fname: 'Anne', lname: 'Lee', date: '2016-12-06 14:38:38', gender: 'Female' }
           ],
-          fields: (value, key) => _.endsWith(key, 'name')
+          fields: (value, key) => key.endsWith('name')
         }
       })
       const vm = wrapper.vm
@@ -145,7 +144,7 @@ describe('Component', () => {
     const wrapper = mount(Component, {
       propsData: {
         data: [
-          {'id': 1, 'fname': 'Jesse', 'lname': 'Simmons', 'date': '2016-10-15 13:43:27', 'gender': 'Male'}
+          { id: 1, fname: 'Jesse', lname: 'Simmons', date: '2016-10-15 13:43:27', gender: 'Male' }
         ],
         testing: true
       }
@@ -156,5 +155,14 @@ describe('Component', () => {
 
     expect(wrapper.emitted()['export-started']).toBeTruthy()
     expect(wrapper.emitted()['export-finished']).toBeTruthy()
+  })
+})
+
+describe('Utils', () => {
+  test('isType', () => {
+    expect(isType(function () { }, 'function')).toBe(true)
+    expect(isType({}, 'object')).toBe(true)
+    expect(isType('csv', 'string')).toBe(true)
+    expect(isType(undefined, 'undefined')).toBe(true)
   })
 })
