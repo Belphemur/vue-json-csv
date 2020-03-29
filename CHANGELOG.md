@@ -1,3 +1,10 @@
+## [1.2.11](https://github.com/Belphemur/vue-json-csv/compare/v1.2.10...v1.2.11) (2020-03-29)
+
+
+### Performance Improvements
+
+* **bundle:** re-organization of imports, remove import *all* from lodash ([4da565b](https://github.com/Belphemur/vue-json-csv/commit/4da565be7d0a9ccd0f618e66c4f3c35b09af9253))
+
 ## [1.2.10](https://github.com/Belphemur/vue-json-csv/compare/v1.2.9...v1.2.10) (2020-01-09)
 
 
