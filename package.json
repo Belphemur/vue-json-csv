@@ -55,7 +55,7 @@
     "last-release-git": "^0.0.3",
     "poi": "^12.7.5",
     "rollup-plugin-vue": "^5.1.5",
-    "semantic-release": "^15.14.0",
+    "semantic-release": "^17.2.3",
     "validate-commit-msg": "^2.14.0",
     "vue-jest": "^3.0.5",
     "vue-json-pretty": "^1.6.3",
