@@ -1,3 +1,10 @@
+## [1.2.12](https://github.com/Belphemur/vue-json-csv/compare/v1.2.11...v1.2.12) (2020-12-15)
+
+
+### Bug Fixes
+
+* **Babel:** use @vue/cli-plugin-babel/preset for proper cross browser transpilation with babel ([088b995](https://github.com/Belphemur/vue-json-csv/commit/088b9952bd1e4f645d9a97fb2ea007c32670675b))
+
 ## [1.2.11](https://github.com/Belphemur/vue-json-csv/compare/v1.2.10...v1.2.11) (2020-03-29)
 
 
