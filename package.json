@@ -2,21 +2,20 @@
   "name": "vue-json-csv",
   "version": "1.2.9",
   "description": "Download your JSON data as an CSV file directly from the browser",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Belphemur/vue-json-csv.git"
+  "scripts": {
+    "build": "vue-cli-service build --target lib --name vue-json-csv src/JsonCSV.vue",
+    "build:example": "poi --prod",
+    "commitmsg": "validate-commit-msg",
+    "dev": "poi --serve",
+    "semantic-release": "semantic-release",
+    "test": "jest"
   },
   "main": "dist/vue-json-csv.common.js",
-  "keywords": [
-    "vue",
-    "vuejs",
-    "vue2",
-    "csv",
-    "json",
-    "export",
-    "json csv",
-    "download",
-    "component"
+  "files": [
+    "dist/",
+    "src/",
+    "README.md",
+    "LICENSE"
   ],
   "dependencies": {
     "file-saver": "^2.0.2",
@@ -26,50 +25,14 @@
     "papaparse": "^5.1.1",
     "vue": "^2.6.11"
   },
-  "scripts": {
-    "commitmsg": "validate-commit-msg",
-    "semantic-release": "semantic-release",
-    "test": "jest",
-    "build": "vue-cli-service build --target lib --name vue-json-csv src/JsonCSV.vue",
-    "dev": "poi --serve",
-    "build:example": "poi --prod"
-  },
-  "poi": {
-    "entry": "example/index.js",
-    "output": {
-      "dir": "docs",
-      "publicUrl": "./"
-    }
-  },
-  "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "vue"
-    ],
-    "transform": {
-      ".*\\.(vue)$": "vue-jest",
-      "^.+\\.js$": "babel-jest"
-    },
-    "verbose": true,
-    "moduleDirectories": [
-      "node_modules",
-      "src"
-    ]
-  },
-  "files": [
-    "dist/",
-    "src/",
-    "README.md",
-    "LICENSE"
-  ],
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
     "@semantic-release/changelog": "^3.0.6",
     "@semantic-release/git": "^7.0.18",
-    "@vue/cli": "^4.1.2",
-    "@vue/cli-service": "^4.1.2",
+    "@vue/cli": "^4.5.9",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-service": "~4.5.9",
     "@vue/test-utils": "^1.0.0-beta.30",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.3",
@@ -98,9 +61,43 @@
     "vue-json-pretty": "^1.6.3",
     "vue-template-compiler": "^2.6.11"
   },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "vue-jest",
+      "^.+\\.js$": "babel-jest"
+    },
+    "verbose": true,
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "vue2",
+    "csv",
+    "json",
+    "export",
+    "json csv",
+    "download",
+    "component"
+  ],
+  "poi": {
+    "entry": "example/index.js",
+    "output": {
+      "dir": "docs",
+      "publicUrl": "./"
     }
   },
   "release": {
@@ -119,5 +116,14 @@
       "@semantic-release/github",
       "@semantic-release/npm"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Belphemur/vue-json-csv.git"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
