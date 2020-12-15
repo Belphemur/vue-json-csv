@@ -2,14 +2,6 @@ import { mount } from '@vue/test-utils'
 import Component, { isType } from '../src/JsonCSV'
 
 describe('Component', () => {
-  test('is a Vue instance', () => {
-    const wrapper = mount(Component, {
-      propsData: {
-        data: []
-      }
-    })
-    expect(wrapper.isVueInstance()).toBeTruthy()
-  })
 
   test('is filtering the columns', () => {
     const wrapper = mount(Component, {
