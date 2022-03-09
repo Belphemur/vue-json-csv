@@ -1,12 +1,10 @@
-const {name} = require('./package.json')
-
 module.exports = {
   input: 'src/JsonCSV.vue',
   plugins: {
-    vue: true,
+    vue: true
   },
-  output : {
+  output: {
     minify: false,
-    target: "browser"
+    target: 'browser'
   }
 }
