@@ -4,9 +4,8 @@
   "description": "Download your JSON data as an CSV file directly from the browser",
   "scripts": {
     "build": "vue-cli-service build --target lib --name vue-json-csv src/JsonCSV.vue",
-    "build:example": "poi --prod",
     "commitmsg": "validate-commit-msg",
-    "dev": "poi --serve",
+    "dev": "vite",
     "semantic-release": "semantic-release",
     "test": "jest"
   },
@@ -23,24 +22,26 @@
     "lodash.pick": "^4.4.0",
     "lodash.pickby": "^4.6.0",
     "papaparse": "^5.3.0",
-    "vue": "^2.6.12"
+    "vue": "^3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
+    "@babel/eslint-parser": "^7.5.4",
     "@babel/preset-env": "^7.12.10",
-    "@semantic-release/changelog": "^5.0.1",
-    "@semantic-release/git": "^9.0.0",
-    "@vue/cli": "^4.5.9",
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-service": "~4.5.9",
-    "@vue/test-utils": "^1.1.2",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0",
+    "@vue/cli": "^5.0",
+    "@vue/cli-plugin-babel": "~5.0",
+    "@vue/cli-service": "~5.0",
+    "@vue/compiler-sfc": "^3.2.0",
+    "@vue/test-utils": "^2.0.0-rc.17",
+    "@vue/vue3-jest": "^27.0.0-alpha.4",
     "babel-core": "7.0.0-bridge.0",
-    "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.6.3",
+    "babel-jest": "^27.5.1",
     "buefy": "^0.9.4",
     "bulma": "^0.9.1",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.15.0",
+    "eslint": "^8.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-import-resolver-node": "^0.3.4",
@@ -48,17 +49,16 @@
     "eslint-plugin-html": "^6.1.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-promise": "^6.0",
     "eslint-plugin-standard": "^5.0.0",
-    "husky": "^4.3.6",
-    "jest": "^26.6.3",
+    "husky": "^7.0.0",
+    "jest": "^27.5",
     "last-release-git": "^0.0.3",
-    "poi": "^12.10.3",
     "rollup-plugin-vue": "^6.0.0",
-    "semantic-release": "^17.3.0",
+    "semantic-release": "^19.0",
     "validate-commit-msg": "^2.14.0",
-    "vue-jest": "^3.0.7",
-    "vue-template-compiler": "^2.6.12"
+    "@vitejs/plugin-vue": "^2.2.0",
+    "vite": "^2.8.6"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -67,7 +67,7 @@
       "vue"
     ],
     "transform": {
-      ".*\\.(vue)$": "vue-jest",
+      ".*\\.(vue)$": "@vue/vue3-jest",
       "^.+\\.js$": "babel-jest"
     },
     "verbose": true,
@@ -84,7 +84,7 @@
   "keywords": [
     "vue",
     "vuejs",
-    "vue2",
+    "vue3",
     "csv",
     "json",
     "export",
@@ -92,13 +92,6 @@
     "download",
     "component"
   ],
-  "poi": {
-    "entry": "example/index.js",
-    "output": {
-      "dir": "docs",
-      "publicUrl": "./"
-    }
-  },
   "release": {
     "getLastRelease": "last-release-git",
     "verifyConditions": [
