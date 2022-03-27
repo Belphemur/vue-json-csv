@@ -3,7 +3,7 @@
  */
 
 import { mount } from '@vue/test-utils'
-import Component, { isType } from '../src/JsonCSV'
+import Component, { isType } from '@/JsonCSV'
 
 describe('Component', () => {
   test('is filtering the columns', () => {

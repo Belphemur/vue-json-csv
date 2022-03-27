@@ -4,11 +4,12 @@
   "description": "Download your JSON data as an CSV file directly from the browser",
   "scripts": {
     "build": "vue-cli-service build --target lib --name vue-json-csv src/JsonCSV.vue",
+    "test:unit": "vue-cli-service test:unit",
+    "buid:example": "vite build",
     "commitmsg": "validate-commit-msg",
     "dev": "vite",
     "semantic-release": "semantic-release",
-    "test": "jest",
-    "buid:example": "vite build"
+    "test": "jest"
   },
   "main": "dist/vue-json-csv.common.js",
   "files": [
@@ -34,6 +35,7 @@
     "@vitejs/plugin-vue": "^2.2.0",
     "@vue/cli": "^5.0.4",
     "@vue/cli-plugin-babel": "~5.0.4",
+    "@vue/cli-plugin-unit-jest": "~5.0.0",
     "@vue/cli-service": "~5.0.4",
     "@vue/compiler-sfc": "^3.2.0",
     "@vue/test-utils": "^2.0.0-rc.17",
@@ -61,12 +63,18 @@
     "validate-commit-msg": "^2.14.0",
     "vite": "^2.8.6"
   },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
   "jest": {
     "moduleFileExtensions": [
       "js",
       "json",
       "vue"
     ],
+    "collectCoverage":true,
     "transform": {
       ".*\\.(vue)$": "@vue/vue3-jest",
       "^.+\\.js$": "babel-jest"
@@ -75,7 +83,8 @@
     "moduleDirectories": [
       "node_modules",
       "src"
-    ]
+    ],
+    "preset": "@vue/cli-plugin-unit-jest"
   },
   "config": {
     "commitizen": {
@@ -113,10 +122,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Belphemur/vue-json-csv.git"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  }
 }
