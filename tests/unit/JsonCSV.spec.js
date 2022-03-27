@@ -1,11 +1,14 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { mount } from '@vue/test-utils'
-import Component, { isType } from '../src/JsonCSV'
+import Component, { isType } from '@/JsonCSV'
 
 describe('Component', () => {
-
   test('is filtering the columns', () => {
     const wrapper = mount(Component, {
-      propsData: {
+      props: {
         data: [
           { id: 1, fname: 'Jesse', lname: 'Simmons', date: '2016-10-15 13:43:27', gender: 'Male' },
           { id: 2, fname: 'John', lname: 'Jacobs', date: '2016-12-15 06:00:53', gender: 'Male' },
@@ -30,7 +33,7 @@ describe('Component', () => {
   describe('label', () => {
     test('the columns using function', () => {
       const wrapper = mount(Component, {
-        propsData: {
+        props: {
           data: [
             { id: 1, fname: 'Jesse', lname: 'Simmons', date: '2016-10-15 13:43:27', gender: 'Male' },
             { id: 2, fname: 'John', lname: 'Jacobs', date: '2016-12-15 06:00:53', gender: 'Male' },
@@ -58,7 +61,7 @@ describe('Component', () => {
     })
     test('the columns using object', () => {
       const wrapper = mount(Component, {
-        propsData: {
+        props: {
           data: [
             { id: 1, fname: 'Jesse', lname: 'Simmons', date: '2016-10-15 13:43:27', gender: 'Male' },
             { id: 2, fname: 'John', lname: 'Jacobs', date: '2016-12-15 06:00:53', gender: 'Male' },
@@ -86,7 +89,7 @@ describe('Component', () => {
   describe('filtering', () => {
     test('using array', () => {
       const wrapper = mount(Component, {
-        propsData: {
+        props: {
           data: [
             { id: 1, fname: 'Jesse', lname: 'Simmons', date: '2016-10-15 13:43:27', gender: 'Male' },
             { id: 2, fname: 'John', lname: 'Jacobs', date: '2016-12-15 06:00:53', gender: 'Male' },
@@ -109,7 +112,7 @@ describe('Component', () => {
     })
     test('using function', () => {
       const wrapper = mount(Component, {
-        propsData: {
+        props: {
           data: [
             { id: 1, fname: 'Jesse', lname: 'Simmons', date: '2016-10-15 13:43:27', gender: 'Male' },
             { id: 2, fname: 'John', lname: 'Jacobs', date: '2016-12-15 06:00:53', gender: 'Male' },
@@ -134,7 +137,7 @@ describe('Component', () => {
 
   test('is triggering event on export', () => {
     const wrapper = mount(Component, {
-      propsData: {
+      props: {
         data: [
           { id: 1, fname: 'Jesse', lname: 'Simmons', date: '2016-10-15 13:43:27', gender: 'Male' }
         ],
