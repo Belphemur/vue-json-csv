@@ -1,6 +1,6 @@
 {
   "name": "vue-json-csv",
-  "version": "1.2.12",
+  "version": "2.0.0",
   "description": "Download your JSON data as an CSV file directly from the browser",
   "scripts": {
     "build": "vue-cli-service build --target lib --name vue-json-csv src/JsonCSV.vue",
@@ -74,7 +74,7 @@
       "json",
       "vue"
     ],
-    "collectCoverage":true,
+    "collectCoverage": true,
     "transform": {
       ".*\\.(vue)$": "@vue/vue3-jest",
       "^.+\\.js$": "babel-jest"

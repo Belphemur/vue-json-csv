@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/Belphemur/vue-json-csv/compare/v1.2.12...v2.0.0) (2022-03-27)
+
+
+### chore
+
+* **Pipeline:** Add github action code ([072aba6](https://github.com/Belphemur/vue-json-csv/commit/072aba6f3646d359fe1b5a33b0a87806450a39a5))
+
+
+### BREAKING CHANGES
+
+* **Pipeline:** Moving to VueJS 3
+
 ## [1.2.12](https://github.com/Belphemur/vue-json-csv/compare/v1.2.11...v1.2.12) (2020-12-15)
 
 
