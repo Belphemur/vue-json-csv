@@ -1,8 +1,7 @@
 language: node_js
 sudo: true
 node_js:
-  - 15
-  - 14
+  - 16
 cache:
   yarn: true
   directories:
