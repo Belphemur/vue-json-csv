@@ -5,7 +5,7 @@
   "scripts": {
     "build": "vue-cli-service build --target lib --name vue-json-csv src/JsonCSV.vue",
     "test:unit": "vue-cli-service test:unit",
-    "buid:example": "vite build",
+    "build:example": "vite build",
     "commitmsg": "validate-commit-msg",
     "dev": "vite",
     "semantic-release": "semantic-release",
