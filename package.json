@@ -7,7 +7,8 @@
     "commitmsg": "validate-commit-msg",
     "dev": "vite",
     "semantic-release": "semantic-release",
-    "test": "jest"
+    "test": "jest",
+    "buid:example": "vite build"
   },
   "main": "dist/vue-json-csv.common.js",
   "files": [

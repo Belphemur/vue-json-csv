@@ -9,5 +9,7 @@ export default defineConfig({
   },
   root: 'example',
   base: './',
-  publicDir: 'docs'
+  build: {
+    outDir: '../docs'
+  }
 })
