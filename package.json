@@ -67,6 +67,7 @@
     "last-release-git": "^0.0.3",
     "rollup-plugin-vue": "^6.0.0",
     "semantic-release": "^19.0",
+    "ts-jest": "^27.1.4",
     "validate-commit-msg": "^2.14.0",
     "vite": "^2.8.6",
     "vue-tsc": "^0.33.9"
