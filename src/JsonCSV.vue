@@ -1,20 +1,21 @@
 <template>
   <div :id="idName" @click="generate">
-    <slot>Download {{name}}</slot>
+    <slot>Download {{ name }}</slot>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import {defineComponent} from 'vue'
 import mapKeys from "lodash.mapkeys";
 import pickBy from "lodash.pickby";
 import pick from "lodash.pick";
 
-import { saveAs } from "file-saver";
-import { unparse } from "papaparse";
+import {saveAs} from "file-saver";
+import {unparse} from "papaparse";
 
-export const isType = (value, type) => typeof value === type;
+export const isType = (value: any, type: string) => typeof value === type;
 
-export default {
+export default defineComponent({
   name: "JsonCSV",
   props: {
     /**
@@ -30,6 +31,7 @@ export default {
      * Can either be an array or a function
      */
     fields: {
+      type: [Array, Function],
       required: false
     },
     /**
@@ -68,7 +70,8 @@ export default {
      */
     advancedOptions: {
       type: Object,
-      default: () => {}
+      default: () => {
+      }
     },
     /**
      * Labels for columns
@@ -76,6 +79,7 @@ export default {
      * Object or function
      */
     labels: {
+      type: [Object, Function],
       required: false
     },
     /**
@@ -102,26 +106,28 @@ export default {
     }
   },
   methods: {
-    labelsFunctionGenerator() {
+
+    labelsFunctionGenerator(): (item: any) => any {
+      let labels: any = this.labels;
       if (
-        !isType(this.labels, "undefined") &&
-        !isType(this.labels, "function") &&
-        !isType(this.labels, "object")
+          !isType(labels, "undefined") &&
+          !isType(labels, "function") &&
+          !isType(labels, "object")
       ) {
         throw new Error("Labels needs to be a function(value,key) or object.");
       }
 
-      if (isType(this.labels, "function")) {
-        return item => {
-          let _mapKeys = mapKeys(item, this.labels);
+      if (isType(labels, "function")) {
+        return (item: any) => {
+          let _mapKeys = mapKeys(item, labels);
           return _mapKeys;
         };
       }
 
-      if (isType(this.labels, "object")) {
+      if (isType(labels, "object")) {
         return item => {
           return mapKeys(item, (item, key) => {
-            return this.labels[key] || key;
+            return labels[key] || key;
           });
         };
       }
@@ -129,28 +135,29 @@ export default {
       return item => item;
     },
 
-    fieldsFunctionGenerator() {
+    fieldsFunctionGenerator(): (item: any) => any {
+      let fields: any = this.fields;
       if (
-        !isType(this.fields, "undefined") &&
-        !isType(this.fields, "function") &&
-        !isType(this.fields, "object") &&
-        !Array.isArray(this.fields)
+          !isType(fields, "undefined") &&
+          !isType(fields, "function") &&
+          !isType(fields, "object") &&
+          !Array.isArray(fields)
       ) {
         throw new Error("Fields needs to be a function(value,key) or array.");
       }
 
       if (
-        isType(this.fields, "function") ||
-        (isType(this.fields, "object") && !Array.isArray(this.fields))
+          isType(fields, "function") ||
+          (isType(fields, "object") && !Array.isArray(fields))
       ) {
         return item => {
-          return pickBy(item, this.fields);
+          return pickBy(item, fields);
         };
       }
 
-      if (Array.isArray(this.fields)) {
+      if (Array.isArray(fields)) {
         return item => {
-          return pick(item, this.fields);
+          return pick(item, fields);
         };
       }
       return item => item;
@@ -158,8 +165,8 @@ export default {
 
     cleaningData() {
       if (
-        isType(this.fields, "undefined") &&
-        isType(this.labels, "undefined")
+          isType(this.fields, "undefined") &&
+          isType(this.labels, "undefined")
       ) {
         return this.data;
       }
@@ -180,14 +187,14 @@ export default {
       }
 
       let csv = unparse(
-        dataExport,
-        Object.assign(
-          {
-            delimiter: this.delimiter,
-            encoding: this.encoding
-          },
-          this.advancedOptions
-        )
+          dataExport,
+          Object.assign(
+              {
+                delimiter: this.delimiter,
+                encoding: this.encoding
+              },
+              this.advancedOptions
+          )
       );
       if (this.separatorExcel) {
         csv = "SEP=" + this.delimiter + "\r\n" + csv;
@@ -205,7 +212,7 @@ export default {
       }
     }
   }
-};
+});
 </script>
 
 <style scoped>
