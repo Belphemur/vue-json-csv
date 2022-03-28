@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "Download your JSON data as an CSV file directly from the browser",
   "scripts": {
-    "build": "vue-cli-service build --target lib --name vue-json-csv src/JsonCSV.vue",
+    "build": "vue-cli-service build --target lib --name vue-json-csv src/JsonCSV.vue && vue-tsc --declaration --emitDeclarationOnly",
     "test:unit": "vue-cli-service test:unit",
     "build:example": "vite build",
     "commitmsg": "validate-commit-msg",
@@ -12,6 +12,7 @@
     "test": "jest"
   },
   "main": "dist/vue-json-csv.common.js",
+  "unpkg": "dist/vue-json-csv.umd.min.js",
   "files": [
     "dist/",
     "src/",
@@ -40,8 +41,8 @@
     "@vitejs/plugin-vue": "^2.2.0",
     "@vue/cli": "^5.0.4",
     "@vue/cli-plugin-babel": "~5.0.4",
-    "@vue/cli-plugin-unit-jest": "~5.0.0",
     "@vue/cli-plugin-typescript": "~5.0.0",
+    "@vue/cli-plugin-unit-jest": "~5.0.0",
     "@vue/cli-service": "~5.0.4",
     "@vue/compiler-sfc": "^3.2.0",
     "@vue/test-utils": "^2.0.0-rc.17",
@@ -67,7 +68,8 @@
     "rollup-plugin-vue": "^6.0.0",
     "semantic-release": "^19.0",
     "validate-commit-msg": "^2.14.0",
-    "vite": "^2.8.6"
+    "vite": "^2.8.6",
+    "vue-tsc": "^0.33.9"
   },
   "browserslist": [
     "> 1%",
