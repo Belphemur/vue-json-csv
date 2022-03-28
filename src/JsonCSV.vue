@@ -199,7 +199,7 @@ export default {
       this.$emit("export-finished");
       if (!this.testing) {
         let blob = new Blob([csv], {
-          type: "application/csvcharset=" + this.encoding
+          type: "text/csv;charset=" + this.encoding
         });
         saveAs(blob, this.name);
       }
