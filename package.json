@@ -1,6 +1,6 @@
 {
   "name": "vue-json-csv",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Download your JSON data as an CSV file directly from the browser",
   "scripts": {
     "build": "vue-cli-service build --target lib --name vue-json-csv src/JsonCSV.vue && vue-tsc --declaration --emitDeclarationOnly",

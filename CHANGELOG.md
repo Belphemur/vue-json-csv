@@ -1,3 +1,20 @@
+# [2.1.0](https://github.com/Belphemur/vue-json-csv/compare/v2.0.0...v2.1.0) (2022-03-28)
+
+
+### Bug Fixes
+
+* **mime:** set the proper mime to the file ([ca1ffa2](https://github.com/Belphemur/vue-json-csv/commit/ca1ffa2447ff9f538d15c53b13ebee2cbcd55fdc))
+
+
+### Features
+
+* **TypeScript:** Add support for typescript ([2bf6363](https://github.com/Belphemur/vue-json-csv/commit/2bf6363d0a5c0be351b480a5e872bfb031bb60c6)), closes [#53](https://github.com/Belphemur/vue-json-csv/issues/53)
+
+
+### Performance Improvements
+
+* **TypeScript:** Use typescript under the hood ([2f105b2](https://github.com/Belphemur/vue-json-csv/commit/2f105b246f09466b07dd2dc64b48eaa8178b8769))
+
 # [2.0.0](https://github.com/Belphemur/vue-json-csv/compare/v1.2.12...v2.0.0) (2022-03-27)
 
 
