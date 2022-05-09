@@ -62,7 +62,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0",
     "eslint-plugin-standard": "^5.0.0",
-    "husky": "^7.0.0",
+    "husky": "^8.0.0",
     "jest": "^27.5",
     "last-release-git": "^0.0.3",
     "rollup-plugin-vue": "^6.0.0",
