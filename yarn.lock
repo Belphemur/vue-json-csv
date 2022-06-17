@@ -2618,10 +2618,10 @@
     "@vue/babel-plugin-transform-vue-jsx" "^1.2.1"
     camelcase "^5.0.0"
 
-"@vue/cli-overlay@^5.0.4":
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/@vue/cli-overlay/-/cli-overlay-5.0.4.tgz#5dae235fd84ecb0f94ed08a475db191fff893a7b"
-  integrity sha512-ZTLAAydILjvx0XHUGSNu/cQDpmvLTMYUutDf2vf6XGkSWYqncQ6RwkeMSQhvQNlgpa/ovwIgrlGxLoojFRwdVg==
+"@vue/cli-overlay@^5.0.6":
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/@vue/cli-overlay/-/cli-overlay-5.0.6.tgz#1c9dd0a2ff90ab7c5dc5c25eff8b57721b4795ae"
+  integrity sha512-rghCRMPVQ4FIKmQy8ipn8fKztdaQSQTktAKob2SGuEL/iBWfclSMAQCXfj908nyzOBymo+q/Sn/oiLhi07oHlA==
 
 "@vue/cli-plugin-babel@~5.0.4":
   version "5.0.6"
@@ -2635,12 +2635,12 @@
     thread-loader "^3.0.0"
     webpack "^5.54.0"
 
-"@vue/cli-plugin-router@^5.0.4":
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-router/-/cli-plugin-router-5.0.4.tgz#d30b20125408d39c7ad19a7f8a4a82aee9e033a9"
-  integrity sha512-lylzCuH3Br0BcTz5IxxSffpyoF9dQ2k4jTdK8QlWrnRanWGw7P9C0kYMr9rohHaXpvAlu6bio392gbNIWpEepg==
+"@vue/cli-plugin-router@^5.0.6":
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-router/-/cli-plugin-router-5.0.6.tgz#b65d39845a8a53dc51b9c263bf75bdd24a53d8be"
+  integrity sha512-5ikUdfsSoKqpBhB5GhGYijH6mJnU+ZGqDv3QBf0brDeeh7PhClntxNAOLkB73c+LNxjBrlNCTkItuByF+AD29w==
   dependencies:
-    "@vue/cli-shared-utils" "^5.0.4"
+    "@vue/cli-shared-utils" "^5.0.6"
 
 "@vue/cli-plugin-typescript@~5.0.0":
   version "5.0.6"
@@ -2673,24 +2673,24 @@
     jest-transform-stub "^2.0.0"
     jest-watch-typeahead "^1.0.0"
 
-"@vue/cli-plugin-vuex@^5.0.4":
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-vuex/-/cli-plugin-vuex-5.0.4.tgz#80853992ac4f423e8e3e8d05a120c46a94a81b5e"
-  integrity sha512-dBwiD6mT9+V2HTHcwaWE8qFNgTk5I/NUvxYVeUN3Mmmpo4y/1RxXnr7BlKGnaQsTypb2RFk3KowqIJtg7s+E3Q==
+"@vue/cli-plugin-vuex@^5.0.6":
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-vuex/-/cli-plugin-vuex-5.0.6.tgz#177bb2904ea57d606b8a3cad0147379fcc304174"
+  integrity sha512-9bwkaLxGqqrD5FPN7iNsIe5x60P0nScioMQvHf2ZIIoFAiM5yuTgOQkdSKGBhn0YG4IjYd1tnlVY4Q/P4ZHaTA==
 
 "@vue/cli-service@~5.0.4":
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/@vue/cli-service/-/cli-service-5.0.4.tgz#d73300ef00395cf7705310336d3b8828e9dec92b"
-  integrity sha512-xRiLNTFYmMCT9edZpyYXHijW5xot3gbZpcWDOXUOhKPHN4qs4XqWALnZlU97JYjZOr3XIr/ZvyciyEfrlUVqSA==
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/@vue/cli-service/-/cli-service-5.0.6.tgz#2de955eacd84eec07b0e288779701459c5a5db9e"
+  integrity sha512-XSiTCjUMk8adjvQIJXBxk3ltEBLyBme8rpqdhJrpgCgSj+8pcPPyYKs1M0petkhwLMv3mEXVPNQmXKFzpdWVrw==
   dependencies:
     "@babel/helper-compilation-targets" "^7.12.16"
     "@soda/friendly-errors-webpack-plugin" "^1.8.0"
     "@soda/get-current-script" "^1.0.2"
     "@types/minimist" "^1.2.0"
-    "@vue/cli-overlay" "^5.0.4"
-    "@vue/cli-plugin-router" "^5.0.4"
-    "@vue/cli-plugin-vuex" "^5.0.4"
-    "@vue/cli-shared-utils" "^5.0.4"
+    "@vue/cli-overlay" "^5.0.6"
+    "@vue/cli-plugin-router" "^5.0.6"
+    "@vue/cli-plugin-vuex" "^5.0.6"
+    "@vue/cli-shared-utils" "^5.0.6"
     "@vue/component-compiler-utils" "^3.3.0"
     "@vue/vue-loader-v15" "npm:vue-loader@^15.9.7"
     "@vue/web-component-wrapper" "^1.3.0"
@@ -3192,12 +3192,7 @@ acorn@^7.1.1:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.4.1.tgz#feaed255973d2e77555b83dbc08851a6c63520fa"
   integrity sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==
 
-acorn@^8.0.4, acorn@^8.0.5, acorn@^8.2.4, acorn@^8.4.1, acorn@^8.5.0:
-  version "8.7.0"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.7.0.tgz#90951fde0f8f09df93549481e5fc141445b791cf"
-  integrity sha512-V/LGr1APy+PXIwKebEWrkZPwoeoF+w1jiOBUmuxuiUIaOHtob8Qc9BTrYo7VuI5fR8tqsy+buA2WFooR5olqvQ==
-
-acorn@^8.7.1:
+acorn@^8.0.4, acorn@^8.0.5, acorn@^8.2.4, acorn@^8.4.1, acorn@^8.5.0, acorn@^8.7.1:
   version "8.7.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.7.1.tgz#0197122c843d1bf6d0a5e83220a788f278f63c30"
   integrity sha512-Xx54uLJQZ19lKygFXOWsscKUbsBZW0CPykPhVQdhIeIwrbPmJzqeASDInc8nKBnp/JT6igTs82qPXz069H8I/A==
@@ -3987,18 +3982,7 @@ browser-process-hrtime@^1.0.0:
   resolved "https://registry.yarnpkg.com/browser-process-hrtime/-/browser-process-hrtime-1.0.0.tgz#3c9b4b7d782c8121e56f10106d84c0d0ffc94626"
   integrity sha512-9o5UecI3GhkpM6DrXr69PblIuWxPKk9Y0jHBRhdocZ2y7YECBFCsHm79Pr3OyR2AvjhDkabFJaDJMYRazHgsow==
 
-browserslist@^4.0.0, browserslist@^4.14.5, browserslist@^4.16.3, browserslist@^4.16.6, browserslist@^4.20.2:
-  version "4.20.2"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.20.2.tgz#567b41508757ecd904dab4d1c646c612cd3d4f88"
-  integrity sha512-CQOBCqp/9pDvDbx3xfMi+86pr4KXIf2FDkTTdeuYw8OxS9t898LA1Khq57gtufFILXpfgsSx5woNgsBgvGjpsA==
-  dependencies:
-    caniuse-lite "^1.0.30001317"
-    electron-to-chromium "^1.4.84"
-    escalade "^3.1.1"
-    node-releases "^2.0.2"
-    picocolors "^1.0.0"
-
-browserslist@^4.20.3:
+browserslist@^4.0.0, browserslist@^4.14.5, browserslist@^4.16.3, browserslist@^4.16.6, browserslist@^4.20.2, browserslist@^4.20.3:
   version "4.20.3"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.20.3.tgz#eb7572f49ec430e054f56d52ff0ebe9be915f8bf"
   integrity sha512-NBhymBQl1zM0Y5dQT/O+xiLP9/rzOIQdKM/eMJBAq7yBgaB6krIYLGejrwVYnSHZdqjscB1SPuAjHwxjvN6Wdg==
@@ -5541,11 +5525,6 @@ electron-to-chromium@^1.4.118:
   version "1.4.129"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.129.tgz#c675793885721beefff99da50f57c6525c2cd238"
   integrity sha512-GgtN6bsDtHdtXJtlMYZWGB/uOyjZWjmRDumXTas7dGBaB9zUyCjzHet1DY2KhyHN8R0GLbzZWqm4efeddqqyRQ==
-
-electron-to-chromium@^1.4.84:
-  version "1.4.96"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.96.tgz#a97438a01d5db1460343fea4a344960b09330990"
-  integrity sha512-DPNjvNGPabv6FcyjzLAN4C0psN/GgD9rSGvMTuv81SeXG/EX3mCz0wiw9N1tUEnfQXYCJi3H8M0oFPRziZh7rw==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -9667,11 +9646,6 @@ node-notifier@^10.0.0:
     shellwords "^0.1.1"
     uuid "^8.3.2"
     which "^2.0.2"
-
-node-releases@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.2.tgz#7139fe71e2f4f11b47d4d2986aaf8c48699e0c01"
-  integrity sha512-XxYDdcQ6eKqp/YjI+tb2C5WM2LgjnZrfYg4vgQt49EK268b6gYCHsBLrK2qvJo4FmCtqmKezb0WZFK4fkrZNsg==
 
 node-releases@^2.0.3:
   version "2.0.4"
