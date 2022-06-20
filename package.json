@@ -70,7 +70,7 @@
     "ts-jest": "^27.1.4",
     "validate-commit-msg": "^2.14.0",
     "vite": "^2.8.6",
-    "vue-tsc": "^0.37.1"
+    "vue-tsc": "^0.38.1"
   },
   "browserslist": [
     "> 1%",
