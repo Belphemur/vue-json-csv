@@ -22,7 +22,7 @@ jobs:
         - name: Set yarn cache
           run: yarn config set cache-folder ${{env.YARN_CACHE}}
         - name: Setup Node.js ${{ matrix.node }}
-          uses: actions/setup-node@v3.4.1
+          uses: actions/setup-node@v3.5.0
           with:
             node-version: ${{ matrix.node }}
         - name: Get yarn cache directory path
@@ -61,7 +61,7 @@ jobs:
       - name: Set yarn cache
         run: yarn config set cache-folder ${{env.YARN_CACHE}}
       - name: Setup Node.js
-        uses: actions/setup-node@v3.4.1
+        uses: actions/setup-node@v3.5.0
         with:
           node-version: ${{env.NODEJS}}
       - name: Get yarn cache directory path
@@ -102,7 +102,7 @@ jobs:
       - name: Set yarn cache
         run: yarn config set cache-folder ${{env.YARN_CACHE}}
       - name: Setup Node.js
-        uses: actions/setup-node@v3.4.1
+        uses: actions/setup-node@v3.5.0
         with:
           node-version: ${{env.NODEJS}}
       - name: Get yarn cache directory path
