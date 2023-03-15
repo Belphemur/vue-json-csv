@@ -2,7 +2,7 @@ name: NodeJs
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   NPM_TOKEN: ${{secrets.NPM_TOKEN }}
-  NODEJS: 16
+  NODEJS: lts/*
   YARN_CACHE: "yarn-cache"
 
 on:
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ '14', '16' ]
+        node: [ '16', 'lts/*' ]
     steps:
         - uses: actions/checkout@v3
         - name: Set yarn cache
