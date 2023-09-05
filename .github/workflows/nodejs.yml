@@ -18,7 +18,7 @@ jobs:
       matrix:
         node: ['lts/*' ]
     steps:
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@v4
         - name: Set yarn cache
           run: yarn config set cache-folder ${{env.YARN_CACHE}}
         - name: Setup Node.js ${{ matrix.node }}
@@ -57,7 +57,7 @@ jobs:
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set yarn cache
         run: yarn config set cache-folder ${{env.YARN_CACHE}}
       - name: Setup Node.js
@@ -98,7 +98,7 @@ jobs:
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set yarn cache
         run: yarn config set cache-folder ${{env.YARN_CACHE}}
       - name: Setup Node.js
