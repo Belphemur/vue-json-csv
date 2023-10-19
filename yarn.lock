@@ -2760,9 +2760,9 @@
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
 "@types/lodash.mapkeys@^4.6.6":
-  version "4.6.7"
-  resolved "https://registry.yarnpkg.com/@types/lodash.mapkeys/-/lodash.mapkeys-4.6.7.tgz#3b06a1e426195fbd6d479ba63e7f91e167c14b34"
-  integrity sha512-mfK0jlh4Itdhmy69/7r/vYftWaltahoS9kCF62UyvbDtXzMkUjuypaf2IASeoeoUPqBo/heoJSZ/vntbXC6LAA==
+  version "4.6.8"
+  resolved "https://registry.yarnpkg.com/@types/lodash.mapkeys/-/lodash.mapkeys-4.6.8.tgz#008fb45e5e7d64e00fae92958b925e2c3dfe5f26"
+  integrity sha512-vA3/4dFOkK9ugEOuqGLEwLeWicwQM03LmboZHuiG0VU0jdFyq5NRdw8XF2cnz5ZdGiGF3Yb8dS9UVoQzirHlfA==
   dependencies:
     "@types/lodash" "*"
 
