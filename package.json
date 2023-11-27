@@ -13,6 +13,7 @@
   },
   "main": "dist/vue-json-csv.common.js",
   "unpkg": "dist/vue-json-csv.umd.min.js",
+  "types": "dist/JsonCSV.vue.d.ts",
   "files": [
     "dist/",
     "src/",
